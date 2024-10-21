@@ -11977,7 +11977,7 @@ main {
 }
 
 footer.footer {
-  padding: 15px;
+  padding: 5px;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -11988,10 +11988,10 @@ p {
   font-size: 18px;
 }
 
-.wooden-table {
+.hero-scene {
   position: relative;
 }
-.wooden-table::before {
+.hero-scene::before {
   content: "";
   position: absolute;
   top: 0;
@@ -12002,13 +12002,17 @@ p {
   background-size: cover;
   filter: brightness(0.3);
 }
-.wooden-table * {
+.hero-scene * {
   position: relative;
 }
-.wooden-table .hero-scene-content {
+.hero-scene .hero-scene-content {
   height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.text-justify {
+  text-align: justify;
 }/*# sourceMappingURL=main.css.map */
