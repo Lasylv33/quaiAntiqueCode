@@ -48,7 +48,7 @@ const LoadContentPage = async () => {
 
 // Fonction pour gérer les événements de routage (clic sur les liens)
 const routeEvent = (event) => {
-  event = event || window.event;
+  event = event || window;
   event.preventDefault();
   // Mise à jour de l'URL dans l'historique du navigateur
   window.history.pushState({}, "", event.target.href);
@@ -62,3 +62,7 @@ window.onpopstate = LoadContentPage;
 window.route = routeEvent;
 // Chargement du contenu de la page au chargement initial
 LoadContentPage();
+
+document.querySelectorAll('nav a.nav-link').forEach((link) => {
+  link.addEventListener('click', routeEvent);
+});
