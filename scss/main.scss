@@ -25,6 +25,7 @@ p{
 
 .hero-scene{
     position: relative;
+    margin-bottom: 15px;
     &::before{
         content:"";
         position: absolute;
@@ -54,6 +55,7 @@ p{
 .text-justify{
     text-align: justify;
 }
+
 .galerie{
     height: 100%;
     display: flex;
@@ -70,7 +72,6 @@ p{
             filter: brightness(0.3);
         }
     }
-
     img{
         transition: all 0.3s;
     }
@@ -83,4 +84,39 @@ p{
         opacity: 0;
         transition: all 0.3s;
     }
+
+    .img{
+        width: 100%;
+        max-height:100%;
+    }
+    
+    .form-label{
+        color: $primary;
+    }
+    
+    .image-card{
+        position:relative;
+        &:hover{
+            .titre-image,
+            .action-image-buttons{
+                opacity: 1;
+            }
+        }
+    
+    
+        .action-image-buttons{
+            position : absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+    
+            opacity: 0;
+            transition: all 0.3s;
+        }
+    }
+
 }
+
