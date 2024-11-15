@@ -11977,7 +11977,7 @@ main {
 }
 
 footer.footer {
-  padding: 15px;
+  padding: 10px;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -11985,7 +11985,7 @@ footer.footer {
 
 p {
   font-family: "Hind Madurai", serif;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .hero-scene {
@@ -12026,8 +12026,10 @@ p {
 
 .image-card {
   position: relative;
+  padding: 15px;
 }
-.image-card:hover .titre-image {
+.image-card:hover .titre-image,
+.image-card:hover .action-image-buttons {
   opacity: 1;
 }
 .image-card:hover img {
@@ -12041,6 +12043,17 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s;
+}
+.image-card .action-image-buttons {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
   opacity: 0;
   transition: all 0.3s;
 }

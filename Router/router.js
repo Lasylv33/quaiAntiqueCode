@@ -8,8 +8,8 @@ const route404 = new Route("404", "Page introuvable", "/pages/404.html");
 const getRouteByUrl = (url) => {
   let currentRoute = null;
   // Parcours de toutes les routes pour trouver la correspondance
-  allRoutes.forEach((element) => {
-    if (element.url == url) {
+  allRoutes.find((element) => {
+    if (element.url === url) {
       currentRoute = element;
     }
   });
@@ -62,7 +62,6 @@ window.onpopstate = LoadContentPage;
 window.route = routeEvent;
 // Chargement du contenu de la page au chargement initial
 LoadContentPage();
-
 document.querySelectorAll('nav a.nav-link').forEach((link) => {
-  link.addEventListener('click', routeEvent);
+ link.addEventListener('click', routeEvent);
 });
